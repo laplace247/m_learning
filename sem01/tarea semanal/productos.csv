@@ -1,2 +1,5 @@
 Nombre,Marca,Cantidad,Precio Unitario,Total
 smartphone,samsung,40,500.0,20000.0
+computadora,dell,45,3500.0,157500.0
+laptop,lenovo,34,3100.0,105400.0
+teclado,logitech,27,55.0,1485.0
