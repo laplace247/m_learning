@@ -13,8 +13,8 @@ while True:
     hsv=cv2.cvtColor(frame,cv2.COLOR_BGR2HSV)
 
     #Definir color a detectar (tono,saturacion,brillo)
-    abajo_azul=np.array([98,68,50])
-    arriba_azul=np.array([121,255,255])
+    abajo_azul=np.array([98,100,20])
+    arriba_azul=np.array([125,255,255])
 
     mascara_azul=cv2.inRange(hsv, abajo_azul, arriba_azul)
 
