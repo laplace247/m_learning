@@ -1,9 +1,9 @@
 #pip install scipy
 import cv2
 import matplotlib.pyplot as plt
-import numpy as np
+from scipy import ndimage
 
-ruta = "C:\\Users\\Estudiante\\Downloads\\imgs\\paisaje.png"
+ruta = "C:\\Users\\Estudiante\\Downloads\\imgs\\hoja.png"
 
 img = cv2.imread(ruta, cv2.IMREAD_GRAYSCALE)
 if img is None:
@@ -13,13 +13,15 @@ if img is None:
 edges = cv2.Canny(img, 100, 200)
 
 # Obtenemos las coordenadas
-ys, xs = np.where(edges != 0)
-
+ys, xs = ndimage.measurements.find_objects(edges > 0)[0]
+ys_indices, xs_indices = (edges > 0)[ys, xs].nonzero()
+ys_coords = ys.start + ys_indices
+xs_coords = xs.start + xs_indices
 
 # Graficamos los bordes
 plt.figure(figsize=(8, 6))
 plt.imshow(img, cmap='gray')
-plt.scatter(xs, ys, s=1, c='red', label='Bordes')
-plt.title('Bordes detectados')
+plt.scatter(xs_coords, ys_coords, s=0.5, c='red', label='Bordes')
+plt.title('Bordes detectados (OpenCV + SciPy)')
 plt.legend()
 plt.show()

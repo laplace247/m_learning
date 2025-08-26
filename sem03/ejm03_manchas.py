@@ -7,33 +7,38 @@ ruta = "C:\\Users\\Estudiante\\Downloads\\imgs\\platano3.png"
 
 img = cv2.imread(ruta, cv2.IMREAD_GRAYSCALE)
 if img is None:
-    raise FileNotFoundError('No se pudo cargar la imagen')
+    raise FileNotFoundError('No se pudo cargar la imagen. Revisa la ruta del archivo.')
 
+# Suavizado de la imagen
 img_suave = median_filter(img, size=5)
 
-# Deteccion de bordes
-edge = cv2.Canny(img_suave, 100, 200)
+# Detección de bordes
+edge = cv2.Canny(img_suave, 50, 150)
 
-# Deteccion de manchas
-manchas, _ = cv2.threshold(edge, 127, 255, cv2.THRESH_BINARY)
+# Detección de manchas
+_, thresh = cv2.threshold(img_suave, 100, 255, cv2.THRESH_BINARY_INV)
 
-labeled_array, num_features = label(manchas)
+#Etiquetar regiones con SciPy
+labeled_array, num_features = label(thresh)
 
-print("Número de manchas detectadas:", num_features)
+print(f"Número de manchas detectadas: {num_features}")
 
-array=[]
-
+# Analizar cada mancha
+areas = []
 for i in range(1, num_features + 1):
-    mask = np.zeros(manchas.shape, dtype=np.uint8)
-    mask[labeled_array == i] = 255
-    array.append(mask)
+    area = np.sum(labeled_array == i)
+    areas.append(area)
 
-print("Máscaras de manchas detectadas:", array)
+areas = np.array(areas)
+manchas_grandes = areas>10
 
-plt.figure(figsize=(12, 4))  # Ajusta el tamaño de la figura
+print(f"Manchas consideras defectos: {np.sum(manchas_grandes)}")
+
+# Visualización de los resultados
+plt.figure(figsize=(12, 5)) 
 
 plt.subplot(1, 3, 1)
-plt.title('Imagen original')
+plt.title('Escala de grises')
 plt.imshow(img, cmap='gray')
 plt.axis('off')
 
@@ -43,10 +48,11 @@ plt.imshow(edge, cmap='gray')
 plt.axis('off')
 
 plt.subplot(1, 3, 3)
-plt.title('Máscaras de manchas')
-mask=np.zeros(manchas.shape, dtype=bool) 
-plt.scatter(np.where(mask), color=plt.cm.nipy_spectral(i / num_features), s=1)
-plt.imshow(labeled_array, cmap='nipy_spectral')
+plt.title('Manchas defectuosas (area>500 pixeles)')
+plt.imshow(thresh, cmap='gray')
+mask=np.isin(labeled_array,np.where(manchas_grandes)[0]+1)
+plt.scatter(*np.where(mask)[::-1], color='red', s=1)
 plt.axis('off')
+
 plt.tight_layout()
 plt.show()
