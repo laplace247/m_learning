@@ -1,0 +1,20 @@
+IMPORTANCIA DE LOS DATOS
+
+Son el recurso esencial del aprendizaje automático. Un modelo solo puede ser tan bueno como los datos con los que se entrena: si estos son abundantes, variados y de calidad, el sistema tendrá mayor precisión y confiabilidad en sus predicciones. 
+
+También se destacan 4 razones fundamentales:
+
+1. Son la base del aprendizaje automatizado
+Los modelos de IA aprenden patrones, relaciones y comportamientos a partir de los datos.
+Cuanto más ricos y variados sean los datos, mejor será la capacidad del modelo para generalizar y tomar decisiones acertadas.
+
+2. Pueden determinar la precisión del modelo
+Datos limpios, completos y bien etiquetados permiten que el modelo sea más preciso.
+Datos erróneos o incompletos pueden llevar a predicciones equivocadas o sesgadas.
+
+3. Pueden representan la realidad
+Los datos deben reflejar el mundo real para que el modelo funcione correctamente en situaciones reales.
+Por ejemplo, si entrenas un modelo para reconocer frutas pero solo usas imágenes de manzanas, no sabrá identificar plátanos o naranjas.
+
+4. Permiten mejorar continuamente
+Los modelos pueden reentrenarse con nuevos datos para adaptarse a cambios en el entorno o en el comportamiento de los usuarios.
