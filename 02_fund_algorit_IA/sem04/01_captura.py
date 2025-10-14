@@ -5,8 +5,8 @@ CLASES={
     0:'mouse',
     1:'celular'
 }
-FOTO_POR_CLASE=10
-RUTA_CLASE="C:\\Users\\Estudiante\\Downloads\\sem04\\data"
+FOTO_POR_CLASE=30
+RUTA_CLASE=r"C:\Users\Estudiante\Downloads\sem05\data"
 
 #Crear las carpetas para las clases sin en caso no existan
 for nombre_clase in CLASES.values():

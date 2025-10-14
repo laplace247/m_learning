@@ -1,7 +1,7 @@
 import cv2
 import os
 
-RUTA_IMAGENES="C:\\Users\\Estudiante\\Downloads\\sem04\\data"
+RUTA_IMAGENES=r"C:\Users\Estudiante\Downloads\sem05\data"
 CLASES={
     0:'mouse',
     1:'celular'
@@ -17,7 +17,7 @@ clase_actual=0
 def dibujar(event,x,y,flags,param):
     global x1,y1,x2,y2, dibujando,cajas
 
-    if event==cv2.EVENT_LBUTTONDOWN:  #Dibuja con clic izq. presionado
+    if event==cv2.EVENT_LBUTTONDOWN:  #Dibuja con el clic izquierdo presionado
         dibujando=True
         x1,y1=x,y
     elif event==cv2.EVENT_MOUSEMOVE and dibujando:
