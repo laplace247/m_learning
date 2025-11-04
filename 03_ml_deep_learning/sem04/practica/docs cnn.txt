@@ -1,0 +1,26 @@
+//redes neuronales convolucionales
+
+--- DATASETS CNN ---
+Cats and Dogs image classification
+Fruits Dataset (Images)
+Flower Image Dataset
+Banana Ripeness Classification Dataset
+
+Aprendizaje de características, capas y clasificación
+
+Una CNN esta conformada de una capa de entrada, una capa de salida y varias capas ocultas entre ambas.
+Estas capas realizan operaciones que modifican los datos, con el propósito de comprender sus características particulares. Las 3 capas más comunes son: convolución, activación o ReLU, y agrupación.
+
+
+-Convolución: Aplica un conjunto de filtros convolucionales a las imágenes de entrada; cada filtro activa diferentes características de las imágenes.
+
+-Unidad lineal rectificada (ReLU): Mantiene los valores positivos y establece los valores negativos en cero, lo que permite un entrenamiento más rápido y eficaz. También se lo conoce como activación, ya que solo las características activadas prosiguen a la siguiente capa.
+
+-Agrupación: Simplifica la salida mediante reducción no lineal de la tasa de muestreo, lo que disminuye el número de parámetros que la red debe aprender.
+
+
+
+https://es.mathworks.com/discovery/convolutional-neural-network.html
+https://codificandobits.com/blog/redes-convolucionales-introduccion/
+CANVAS
+https://www.canva.com/design/DAG3sQWXcrQ/clyhaiAEz-gw709pm1jIKA/edit?utm_content=DAG3sQWXcrQ&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
