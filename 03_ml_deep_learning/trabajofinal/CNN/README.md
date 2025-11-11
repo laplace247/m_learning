@@ -12,10 +12,9 @@ Proyecto de clasificación de imágenes usando Redes Neuronales Convolucionales 
 ## Instalación
 
 1. **Instalar dependencias:**
-   
+   ```bash
    pip install -r requirements.txt
    ```
-
 2. **Verificar estructura de datos:**
    ```
    data/
@@ -26,7 +25,6 @@ Proyecto de clasificación de imágenes usando Redes Neuronales Convolucionales 
        ├── gato/     (imágenes de gatos)
        └── perro/    (imágenes de perros)
    ```
-
 ## Uso
 
 ### Opción 1: Interfaz Gráfica (Recomendado) 🎨
