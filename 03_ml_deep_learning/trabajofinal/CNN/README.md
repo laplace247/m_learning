@@ -2,14 +2,17 @@
 
 Proyecto de clasificación de imágenes usando Redes Neuronales Convolucionales para distinguir entre perros y gatos.
 
+## 🔗 Enlaces del Proyecto
+
+- **GitHub:** https://github.com/laplace247/m_learning/tree/main/03_ml_deep_learning/trabajofinal/CNN
+- **Drive:** https://drive.google.com/drive/folders/1c9vXX0N5JL_Yx7t4WONH0QDCxGWDN9Lp?usp=sharing
+- **Dataset:** https://qu.ax/nfuXR.zip
+- **Modelos:** https://qu.ax/iAXOZ.zip
+
 ## Instalación
 
 1. **Instalar dependencias:**
-   ```bash
-   # Ejecutar el archivo batch
-   install_requirements.bat
    
-   # O manualmente:
    pip install -r requirements.txt
    ```
 
@@ -26,47 +29,77 @@ Proyecto de clasificación de imágenes usando Redes Neuronales Convolucionales 
 
 ## Uso
 
-### Opción 1: Script Principal (Recomendado)
+### Opción 1: Interfaz Gráfica (Recomendado) 🎨
 ```bash
-python ejecutar.py
+python interfaz_cnn.py
 ```
+- Interfaz visual para subir imágenes
+- Resultados con porcentajes en tiempo real
+- Fácil de usar
 
-### Opción 2: Ejecución Manual
+### Opción 2: CNN Completa
+```bash
+python ejecutar_cnn.py
+```
+- CNN optimizada con data augmentation
+- Mejor precisión
 
-1. **Entrenar modelo:**
+### Opción 3: Scripts Individuales
+
+1. **Entrenar CNN:**
    ```bash
-   python entrenamiento_simple.py
+   python cnn_perro_gato.py
    ```
 
-2. **Hacer predicciones:**
+2. **Predictor CNN:**
    ```bash
-   python predictor_simple.py
-   ```
-
-3. **Probar modelo:**
-   ```bash
-   python test_predictor.py
+   python predictor_cnn.py
    ```
 
 ## Archivos del Proyecto
 
-- `ejecutar.py` - Script principal (USAR ESTE)
-- `entrenamiento_simple.py` - Entrenamiento optimizado
-- `predictor_simple.py` - Predictor seguro
-- `test_predictor.py` - Pruebas del modelo
-- `requirements.txt` - Dependencias
-- `install_requirements.bat` - Instalador Windows
+### 🎨 Interfaz Gráfica
+- `interfaz_cnn.py` - **Interfaz visual (RECOMENDADO)**
+- `requirements_interfaz.txt` - Dependencias para interfaz
 
-### Archivos Originales (con problemas)
-- `entrenamiento.py` - Versión original corregida
-- `predictor.py` - Versión original (vulnerabilidades de seguridad)
+### 🧠 CNN Optimizada
+- `cnn_perro_gato.py` - CNN con data augmentation
+- `predictor_cnn.py` - Predictor para CNN
+- `ejecutar_cnn.py` - Script principal CNN
+
+### 📁 Archivos Base
+- `ejecutar.py` - Script principal básico
+- `entrenamiento_simple.py` - Entrenamiento simple
+- `predictor_simple.py` - Predictor básico
+- `test_predictor.py` - Pruebas del modelo
+- `requirements.txt` - Dependencias básicas
+
+### ⚠️ Archivos Originales (con problemas)
+- `entrenamiento.py` - Versión original
+- `predictor.py` - **NO USAR** (vulnerabilidades)
 
 ## Requisitos del Sistema
 
 - Python 3.8-3.11 (NO 3.13)
 - TensorFlow 2.15.0
+- Pillow (para interfaz gráfica)
 - 4GB+ RAM recomendado
 - GPU opcional (acelera entrenamiento)
+
+## Descarga de Datos
+
+1. **Descargar dataset:** https://qu.ax/nfuXR.zip
+2. **Extraer** en la carpeta `data/`
+3. **Verificar estructura:**
+   ```
+   data/
+   ├── entrenamiento/
+   │   ├── gato/
+   │   └── perro/
+   └── validacion/
+       ├── gato/
+       └── perro/
+   ```
 
 ## Solución de Problemas
 
@@ -75,8 +108,20 @@ python ejecutar.py
 3. **Imágenes faltantes:** Verificar estructura de carpetas
 4. **Memoria insuficiente:** Reducir batch_size en entrenamiento
 
-## Notas de Seguridad
+## 🚀 Inicio Rápido
 
-- `predictor.py` original tiene vulnerabilidades críticas
-- Usar `predictor_simple.py` en su lugar
-- No ejecutar `predictor.py` en producción
+1. **Instalar dependencias:**
+   ```bash
+   pip install tensorflow pillow numpy matplotlib
+   ```
+
+2. **Descargar datos** del enlace de arriba
+
+3. **Ejecutar interfaz:**
+   ```bash
+   python interfaz_cnn.py
+   ```
+## Capturas de Pantalla
+
+![captura](img/screenshot.png)
+
