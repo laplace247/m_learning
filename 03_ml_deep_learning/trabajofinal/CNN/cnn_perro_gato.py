@@ -133,10 +133,10 @@ def predecir_imagen(ruta_imagen):
 # Probar con imágenes de ejemplo
 print("\n=== PRUEBAS ===")
 imagenes_prueba = [
-    "Imagenes prueba/cat1.jpg",
-    "Imagenes prueba/cat2.jpg",
-    "Imagenes prueba/dog1.jpg", 
-    "Imagenes prueba/dog2.jpg"
+    "imgs_prueba/cat1.jpg",
+    "imgs_prueba/cat2.jpg",
+    "imgs_prueba/dog1.jpg", 
+    "imgs_prueba/dog2.jpg"
 ]
 
 for img in imagenes_prueba:

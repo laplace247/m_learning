@@ -67,12 +67,12 @@ def main():
             if opcion == "1":
                 # Imágenes de ejemplo
                 imagenes = [
-                    "Imagenes prueba/cat1.jpg",
-                    "Imagenes prueba/cat2.jpg",
-                    "Imagenes prueba/cat3.jpg",
-                    "Imagenes prueba/dog1.jpg",
-                    "Imagenes prueba/dog2.jpg",
-                    "Imagenes prueba/dog3.jpg"
+                    "imgs_prueba/cat1.jpg",
+                    "imgs_prueba/cat2.jpg",
+                    "imgs_prueba/cat3.jpg",
+                    "imgs_prueba/dog1.jpg",
+                    "imgs_prueba/dog2.jpg",
+                    "imgs_prueba/dog3.jpg"
                 ]
                 
                 print("\n--- RESULTADOS ---")

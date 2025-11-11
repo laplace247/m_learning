@@ -121,5 +121,5 @@ python ejecutar_cnn.py
    ```
 ## Capturas de Pantalla
 
-![captura](img/screenshot.png)
+![captura](screenshot.png)
 
