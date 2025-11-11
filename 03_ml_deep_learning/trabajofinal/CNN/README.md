@@ -119,7 +119,14 @@ python ejecutar_cnn.py
    ```bash
    python interfaz_cnn.py
    ```
-## Capturas de Pantalla
+   
+## 📸 Capturas de Pantalla
 
-![captura](screenshot.png)
+### Entrenamiento
+
+![captura](entrenando.png)
+
+### Predicción
+
+![captura2](screenshot.png)
 
