@@ -1,0 +1,14 @@
+usar tkinter para la interfaz
+usar yolo para la detección de naranjas
+
+interfaz completo 
+dashboard
+
+interfaz estético con tkinter
+detección de naranjas con yolo
+registro de base de datos
+
+reporte estadístico completo
+documentación de proyecto
+
+
