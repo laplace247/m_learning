@@ -22,8 +22,8 @@ Detección de plagas en naranjas usando YOLO v8 y OpenCV.
 deteccion_nrj/
 ├── img/
 │   ├── caract.prj open cv.txt
-│   ├── deteccion de plaga (naranjas).png
-│   ├── interfaz de deteccion de plaga naranjas.png
+│   ├── deteccion de plaga (naranjas).png (screenshot1)
+│   ├── interfaz de deteccion de plaga naranjas.png (screenshot2)
 │   └── monton-naranjas-manchas-negras-ellas_77316-66.jpeg
 ├── video/
 │   ├── naranjas.mp4
@@ -42,7 +42,7 @@ deteccion_nrj/
 ### Uso
 1. Ejecutar archivos en orden (01 → 05)
 2. El modelo entrenado se guarda en `runs/detect/objetos/weights/best.pt`
-3. Dataset disponible: https://qu.ax/eOgcY
+3. Dataset disponible: https://qu.ax/eOgcY.zip
 
 ### Requisitos
 ```
@@ -50,5 +50,13 @@ ultralytics
 opencv-python
 pyyaml
 ```
+## Captura de Pantalla
+Aquí tenemos la captura de pantalla del proyecto:
+
+![captura](img/screenshot1.png)
+
+![captura](img/screenshot2.png)
+
+
 ## Licencia
 Este proyecto está bajo la licencia MIT. Consulta el archivo LICENSE para más detalles.
