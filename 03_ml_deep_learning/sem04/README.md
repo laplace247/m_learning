@@ -1,4 +1,11 @@
-https://qu.ax/QjShq.zip (detec plaga nrj)
+conectar el dataset 300 mb o dataset 145 mb (son datasets de nrj)
+para que cuando abra la camara detecte si una naranja esta enferma o sana
+
+
+https://www.kaggle.com/datasets/jonathansilva2020/orange-diseases-dataset
+https://www.kaggle.com/datasets/jonathansilva2020/dataset-for-classification-of-citrus-diseases
+
+https://qu.ax/bORih  (detec plaga nrj.zip)
 
 ------------------------------------------------
 
